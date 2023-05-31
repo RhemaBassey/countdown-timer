@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>⏳</title>
+  </head>
+  <body>
+    <h1>COUNTDOWN TIMER</h1>
+    <h2>(Hours : Minutes : Seconds)</h2>
+    <!-- HOUR -->
+    <select name="hours" id="hoursSelect">
+      <!-- <option value="" disabled selected>Hours</option> -->
+      <script>
+        for (var i = 0; i <= 23; i++) {
+          document.write(
+            "<option value='" +
+              i +
+              "'>" +
+              i.toString().padStart(2, "0") +
+              "</option>"
+          );
+        }
+      </script>
+    </select>
+    :
+    <!-- MINUTES -->
+    <select name="minutes" id="minutesSelect">
+      <!-- <option value="" disabled selected>Minutes</option> -->
+      <script>
+        for (var i = 0; i <= 59; i++) {
+          document.write(
+            "<option value='" +
+              i +
+              "'>" +
+              i.toString().padStart(2, "0") +
+              "</option>"
+          );
+        }
+      </script>
+    </select>
+    :
+    <!-- SECONDS -->
+    <select name="seconds" id="secondsSelect">
+      <!-- <option value="" disabled selected>Seconds</option> -->
+      <script>
+        for (var i = 0; i <= 59; i++) {
+          document.write(
+            "<option value='" +
+              i +
+              "'>" +
+              i.toString().padStart(2, "0") +
+              "</option>"
+          );
+        }
+      </script>
+    </select>
+    <p>
+      <button id="startButton">Start</button>
+      <button id="stopButton" disabled>Stop</button>
+      <button id="resetButton">Reset</button>
+    </p>
+    <h1><div id="countdown"></div></h1>
+
+    <audio id="alarmSound" src="alarm-sound.mp3" preload="auto"></audio>
+    <script src="index.js"></script>
+  </body>
+</html>
